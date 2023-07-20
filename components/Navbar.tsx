@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import singin from "../app/signin/page";
 
 import CustomButton from "./CustomButton";
 
@@ -10,7 +11,9 @@ const NavBar = () => (
         <Image src="/logo.svg" alt="logo" width={118} height={18} className="object-contain" />
       </Link>
 
-      <CustomButton title="Sign in" btnType="button" containerStyles="text-primary-blue rounded-full bg-white min-w-[130px]" />
+      <Link href="/signin">
+        <CustomButton title="Sign in" btnType="button" containerStyles="text-primary-blue rounded-full bg-white min-w-[130px]" />
+      </Link>
     </nav>
   </header>
 );
